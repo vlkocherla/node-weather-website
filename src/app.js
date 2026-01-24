@@ -4,6 +4,8 @@ import path from 'path'
 import hbs from 'hbs'
 import geocode from './utils/geocode.js'
 import forecast from './utils/forecast.js'
+import dotenv from 'dotenv'
+dotenv.config()
 // import fs from 'fs'
 
 const __filename = fileURLToPath(import.meta.url)

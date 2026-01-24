@@ -1,9 +1,9 @@
 import request from 'request'
 
 const geocode = (address, callback) => {
-  const url =
-    'https://api.geoloods.io/v2/search?api_key=gl_live_45e7bf542b11b27ceb125f8d52f23217efc6ee3b31db5e2c83f7e6d85c08c31d&query=' +
-    encodeURIComponent(address)
+  const url = `https://api.geoloods.io/v2/search?api_key=${
+    process.env.GEO_API_KEY
+  }&query=${encodeURIComponent(address)}`
 
   request({ url, json: true }, (error, { body } = {}) => {
     if (error) {
